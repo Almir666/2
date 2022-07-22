@@ -10,7 +10,7 @@ void FillArray(string[] arr)
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.WriteLine("Введи " + (count + 1) + " элемент из символов" + ":");
+        Console.WriteLine("Введи " + (count + 1) + " элемент из символов" + ":")
         arr[i] = Console.ReadLine();
         count++;
     }
