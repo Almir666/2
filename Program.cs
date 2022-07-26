@@ -2,21 +2,27 @@
 // которыъ меньше либо равна 3 символа. Первоначальный массив можно ввести с клавиатуры,
 // либо задать на старте выполнения алгоритма.  
 
-string[] MassivStrok = {"Hello", "cat", ":-)", "World"};
 
-void PrintArray(string[] arr)
+string[] StrLength3(string[] arrayOld)
 {
-    for (int i = 0; i < arr.Length; i++)
+    string[] arrayNew = new string[arrayOld.Length];
+    for(int i = 0; i < arrayOld.Length; i++)
     {
-        if (arr[i].Length <= 3)
-        {
-            Console.Write($" {arr[i]} ");
-        }
+        arrayNew[i] = arrayOld[i];
+    }
+    return arrayNew;
+}
+
+int letter = 3;
+string[] data = new string[] {"Hello", "hi", ":)", "cat", "World"};
+string[] result = new string[0];
+for(int i = 0; i < data.Length; i++)
+{
+    int strLength = data[i].Length;
+    if(strLength <= letter)
+    {
+        result = StrLength3(data);
     }
 }
 
-Console.WriteLine();
-Console.WriteLine("Сформирован массив из подходящих строк:");
-PrintArray(MassivStrok);
-Console.WriteLine();
-Console.WriteLine();
+Console.WriteLine(String.Join(", ", result));
